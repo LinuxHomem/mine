@@ -1,0 +1,25 @@
+{
+  "lastKnownName": "Linux",
+  "lastLogin": 1610244386927,
+  "lastLogout": 1610244748798,
+  "lastIP": "/127.0.0.1",
+  "firstJoin": 1610242594766,
+  "startedFirstJoin": false,
+  "vanish": false,
+  "warnings": [],
+  "invulnerable": false,
+  "mail": [],
+  "isFrozen": false,
+  "notes": [],
+  "jailOnNextLogin": false,
+  "kitLastUsedTime": {},
+  "lastLocation": {
+    "world": "16860d8c-0305-4126-9963-34d37a087958",
+    "rotx": 0.0,
+    "rotz": 0.0,
+    "roty": 0.0,
+    "x": -609.9145245056734,
+    "y": 69.0,
+    "z": 409.782078814252
+  }
+}

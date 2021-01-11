@@ -1,0 +1,150 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  weaponlib (mw-1.11.6_mc1.11.2.jar)
+  SpongeCoremod (spongeforge-1.11.2-2476-6.1.0-BETA-2792.jar)
+Contact their authors BEFORE contacting forge
+
+// My bad.
+
+Time: 09/01/21 23:28
+Description: Exception in server tick loop
+
+net.minecraftforge.fml.common.LoaderExceptionModCrash: Caught exception from PistonMOTD (pistonmotd)
+Caused by: com.google.common.util.concurrent.ExecutionError: com.google.common.util.concurrent.ExecutionError: java.lang.NoClassDefFoundError: Lorg/spongepowered/api/util/metric/MetricsConfigManager;
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2199)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3934)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3938)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4821)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4827)
+	at com.google.inject.internal.FailableCache.get(FailableCache.java:48)
+	at com.google.inject.internal.ConstructorInjectorStore.get(ConstructorInjectorStore.java:50)
+	at com.google.inject.internal.ConstructorBindingImpl.initialize(ConstructorBindingImpl.java:136)
+	at com.google.inject.internal.InjectorImpl.initializeBinding(InjectorImpl.java:533)
+	at com.google.inject.internal.AbstractBindingProcessor$Processor$1.run(AbstractBindingProcessor.java:160)
+	at com.google.inject.internal.ProcessedBindingData.initializeBindings(ProcessedBindingData.java:44)
+	at com.google.inject.internal.InternalInjectorCreator.initializeStatically(InternalInjectorCreator.java:123)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:107)
+	at com.google.inject.internal.InjectorImpl.createChildInjector(InjectorImpl.java:226)
+	at com.google.inject.internal.InjectorImpl.createChildInjector(InjectorImpl.java:233)
+	at org.spongepowered.mod.plugin.SpongeModPluginContainer.constructMod(SpongeModPluginContainer.java:282)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:253)
+	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:231)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at net.minecraftforge.fml.common.LoadController.redirect$onPost$zzd000(LoadController.java:561)
+	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:148)
+	at net.minecraftforge.fml.common.Loader.loadMods(Loader.java:582)
+	at net.minecraftforge.fml.server.FMLServerHandler.beginServerLoading(FMLServerHandler.java:99)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onServerStart(FMLCommonHandler.java:332)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:121)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:442)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.google.common.util.concurrent.ExecutionError: java.lang.NoClassDefFoundError: Lorg/spongepowered/api/util/metric/MetricsConfigManager;
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2199)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3934)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3938)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4821)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4827)
+	at com.google.inject.internal.FailableCache.get(FailableCache.java:48)
+	at com.google.inject.internal.MembersInjectorStore.get(MembersInjectorStore.java:68)
+	at com.google.inject.internal.ConstructorInjectorStore.createConstructor(ConstructorInjectorStore.java:74)
+	at com.google.inject.internal.ConstructorInjectorStore.access$000(ConstructorInjectorStore.java:29)
+	at com.google.inject.internal.ConstructorInjectorStore$1.create(ConstructorInjectorStore.java:37)
+	at com.google.inject.internal.ConstructorInjectorStore$1.create(ConstructorInjectorStore.java:33)
+	at com.google.inject.internal.FailableCache$1.load(FailableCache.java:37)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3524)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2317)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2280)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2195)
+	... 43 more
+Caused by: java.lang.NoClassDefFoundError: Lorg/spongepowered/api/util/metric/MetricsConfigManager;
+	at java.lang.Class.getDeclaredFields0(Native Method)
+	at java.lang.Class.privateGetDeclaredFields(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at com.google.inject.spi.InjectionPoint.getInjectionPoints(InjectionPoint.java:675)
+	at com.google.inject.spi.InjectionPoint.forInstanceMethodsAndFields(InjectionPoint.java:380)
+	at com.google.inject.internal.MembersInjectorStore.createWithListeners(MembersInjectorStore.java:93)
+	at com.google.inject.internal.MembersInjectorStore.access$000(MembersInjectorStore.java:37)
+	at com.google.inject.internal.MembersInjectorStore$1.create(MembersInjectorStore.java:45)
+	at com.google.inject.internal.MembersInjectorStore$1.create(MembersInjectorStore.java:42)
+	at com.google.inject.internal.FailableCache$1.load(FailableCache.java:37)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3524)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2317)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2280)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2195)
+	... 58 more
+Caused by: java.lang.ClassNotFoundException: org.spongepowered.api.util.metric.MetricsConfigManager
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:191)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 72 more
+Caused by: java.lang.NullPointerException
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:182)
+	... 74 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.handler$onCrashReport$zhl000(MinecraftServer.java:3974)
+
+-- Sponge CauseTracker --
+Details:
+	Cause Stack: [Empty stack]
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.handler$onCrashReport$zhl000(MinecraftServer.java:3974)
+	at net.minecraft.server.MinecraftServer.func_71230_b(MinecraftServer.java:840)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71230_b(DedicatedServer.java:358)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:514)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.11.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_271, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1635651304 bytes (1559 MB) / 1978138624 bytes (1886 MB) up to 1978138624 bytes (1886 MB)
+	JVM Flags: 3 total; -Xmx2000M -Xms2000M -Xmx2000M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.38 Powered by Forge 13.20.1.2386 11 mods loaded, 11 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UC	minecraft{1.11.2} [Minecraft] (minecraft.jar) 
+	UC	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UC	FML{8.0.99.99} [Forge Mod Loader] (forge-1.11.2-13.20.1.2386-universal.jar) 
+	UC	forge{13.20.1.2386} [Minecraft Forge] (forge-1.11.2-13.20.1.2386-universal.jar) 
+	UC	spongeapi{6.1.0-SNAPSHOT-d1eb7e2} [SpongeAPI] (spongeforge-1.11.2-2476-6.1.0-BETA-2792.jar) 
+	UC	sponge{1.11.2-2476-6.1.0-BETA-2792} [SpongeForge] (spongeforge-1.11.2-2476-6.1.0-BETA-2792.jar) 
+	UC	mercurius_updater{1.0} [mercurius_updater] (MercuriusUpdater-1.11.2.jar) 
+	UC	mw{1.11.6} [Modern Warfare] (mw-1.11.6_mc1.11.2.jar) 
+	UC	nucleus{1.1.9.1-LTS-S6.0} [Nucleus] (Nucleus-1.1.9.1-LTS-S6.0-MC1.11.2-plugin.jar) 
+	UE	pistonmotd{4.3.0} [PistonMOTD] (PistonMOTD-4.3.0.jar) 
+	UC	wasted{0.8.0-S7.1-BETA} [Wasted] (Wasted-0.8.0-S7.1-BETA.jar) 
+	Loaded coremods (and transformers): 
+weaponlib (mw-1.11.6_mc1.11.2.jar)
+  com.vicmatskiv.weaponlib.core.WeaponlibClassTransformer
+SpongeCoremod (spongeforge-1.11.2-2476-6.1.0-BETA-2792.jar)
+  org.spongepowered.common.launch.transformer.SpongeSuperclassTransformer
+	Profiler Position: N/A (disabled)
+	Is Modded: Definitely; Server brand changed to 'fml,forge,sponge'
+	Type: Dedicated Server (map_server.txt)
